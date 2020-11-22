@@ -7,7 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -85,7 +87,10 @@ public class MainActivity extends AppCompatActivity {
         mButtonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                login();
+                boolean valido = validacion();
+                if(valido){
+                    login();
+                }
             }
         });
 
@@ -186,7 +191,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
     private void login() {
         String email = mTextInputEmail.getText().toString();
         String password = mTextInputPassword.getText().toString();
@@ -207,5 +211,32 @@ public class MainActivity extends AppCompatActivity {
         });
         Log.d("CAMPO", "email: " + email);
         Log.d("CAMPO", "password: " + password);
+    }
+
+    private boolean validacion(){
+        boolean valido = true;
+
+        String usuario = mTextInputEmail.getText().toString().trim();
+        String pass = mTextInputPassword.getText().toString().trim();
+
+        if(usuario.equals("") ){
+            mTextInputEmail.setError("Debe ingresar su correo electrónico.");
+            valido = false;
+        }else{
+            if(!validarCorreo(usuario)){
+                mTextInputEmail.setError("Debe ingresar un correo válido.");
+                valido = false;
+            }
+        }
+        if(pass.equals("")){
+            mTextInputPassword.setError("Debe ingresar su contraseña.");
+            valido = false;
+        }
+
+        return valido;
+    }
+
+    public static boolean validarCorreo(CharSequence target) {
+        return (!TextUtils.isEmpty(target) && Patterns.EMAIL_ADDRESS.matcher(target).matches());
     }
 }
