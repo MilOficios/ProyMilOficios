@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "924517446542",
+    "firebase_url": "https://miloficiosapp-b8c30.firebaseio.com",
+    "project_id": "miloficiosapp-b8c30",
+    "storage_bucket": "miloficiosapp-b8c30.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924517446542:android:0ce422264a19e9aeb7eadf",
+        "android_client_info": {
+          "package_name": "firebase.app.com.miloficiosproy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "924517446542-jcb3ud3ebnf0u887f5pkgt1dv7ept86a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "firebase.app.com.miloficiosproy",
+            "certificate_hash": "ea78d9ec99112f400264978bcf1b5723a03e06db"
+          }
+        },
+        {
+          "client_id": "924517446542-ci4us6t6kl4c58vkfurqqffueskbeitb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "firebase.app.com.miloficiosproy",
+            "certificate_hash": "c48b76134f9fcb36ac6d479dbd6ad1b8e9419b51"
+          }
+        },
+        {
+          "client_id": "924517446542-38luu5m0pui207bg84dkc1uha4no6gln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIRq_ewWVOQ7qF1Q4eO8VoR9ZNTX8MOlg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "924517446542-38luu5m0pui207bg84dkc1uha4no6gln.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
