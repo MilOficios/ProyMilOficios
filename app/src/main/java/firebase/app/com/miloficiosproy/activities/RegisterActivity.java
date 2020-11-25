@@ -92,7 +92,7 @@ public class RegisterActivity extends AppCompatActivity {
             if (isEmailValid(email)) {
                 if (password.equals(confirmPassword)) {
                     if (password.length() >= 6) {
-                        createUser(username, email, password, phone);
+                        createUser(username, email, password, phone, "client");
                     }
                     else {
                         Toast.makeText(this, "La contraseña debe tener al menos 6 caracteres", Toast.LENGTH_SHORT).show();
@@ -111,7 +111,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
 
-    private void createUser(final String username, final String email, final String password, final  String phone) {
+    private void createUser(final String username, final String email, final String password, final  String phone, final String type) {
         mDialog.show();
         mAuthProvider.register(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
@@ -124,6 +124,7 @@ public class RegisterActivity extends AppCompatActivity {
                     user.setEmail(email);
                     user.setUsername(username);
                     user.setPhone(phone);
+                    user.setType(type);
                     user.setTimestamp(new Date().getTime());
 
                     mUsersProvider.create(user).addOnCompleteListener(new OnCompleteListener<Void>() {

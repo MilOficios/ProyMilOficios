@@ -8,20 +8,23 @@ public class User {
     private String phone;
     private String imageProfile;
     private String imageCover;
+    private String type;
+
     private long timestamp;
 
     public User() {
 
     }
 
-    public User(String id, String email, String username, String phone, long timestamp, String imageProfile ,String imageCover) {
+    public User(String id, String email, String username, String phone, String imageProfile, String imageCover, String type, long timestamp) {
         this.id = id;
         this.email = email;
         this.username = username;
         this.phone = phone;
-        this.timestamp = timestamp;
         this.imageProfile = imageProfile;
         this.imageCover = imageCover;
+        this.type = type;
+        this.timestamp = timestamp;
     }
 
     public String getId() {
@@ -78,5 +81,13 @@ public class User {
 
     public void setImageCover(String imageCover) {
         this.imageCover = imageCover;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }
