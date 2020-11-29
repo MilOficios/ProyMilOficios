@@ -347,6 +347,8 @@ public class EditProfileActivity extends AppCompatActivity {
             }
         });
     }
+
+
     private void selectOptionImage(final int numberImage) {
 
         mBuilderSelector.setItems(options, new DialogInterface.OnClickListener() {
