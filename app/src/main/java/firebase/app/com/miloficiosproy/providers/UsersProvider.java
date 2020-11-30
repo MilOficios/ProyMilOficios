@@ -50,5 +50,11 @@ public class UsersProvider {
         return mCollection.document(user.getId()).update(map);
     }
 
+    public Task<Void> updateOnline(String idUser, boolean status) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("online", status);
+        map.put("lastConnect", new Date().getTime());
+        return mCollection.document(idUser).update(map);
+    }
 
 }

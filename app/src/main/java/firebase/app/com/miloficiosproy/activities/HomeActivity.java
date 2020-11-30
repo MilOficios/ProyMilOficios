@@ -27,7 +27,7 @@ public class HomeActivity extends AppCompatActivity {
 
         bottomNavigation = findViewById(R.id.bottom_navigation);
         bottomNavigation.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
-        openFragment(new HomeFragment());
+        openFragment(new ProfileFragment());
     }
 
     public void openFragment(Fragment fragment) {
@@ -41,11 +41,11 @@ public class HomeActivity extends AppCompatActivity {
     BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                    if (item.getItemId() == R.id.itemHome) {
+                    //if (item.getItemId() == R.id.itemHome) {
                         // FRAGMENT HOME
-                        openFragment(new HomeFragment());
-                    }
-                    else if (item.getItemId() == R.id.itemChats) {
+                      //  openFragment(new HomeFragment());
+                    //}else
+                        if (item.getItemId() == R.id.itemChats) {
                         // FRAGMENT CHATS
                         openFragment(new ChatsFragment());
 
